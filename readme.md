@@ -11,10 +11,14 @@ Reglas relacionadaas a como se deben implementar las pruebas unitarias para este
 * Libreria Testing :  Native Unit Test Project -> mstest
   * [Documentacion](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
 * Patrones de diseño a considerar
-  * DDD
+  * DDD 
   * Repository
   * CQRS
   * Dependency Injection
+
+### Recursos
+
+* implementar lista
 
 ### Reglas
 
@@ -22,13 +26,19 @@ Este proyecto de unit testing sigue una estrategia de replicacion de ruta y name
 
 ### Tips y Trucos
 
-#### Crear proyecto de prueba unitaria netcore y agregarlo al proyecto
+#### Crear proyecto de prueba unitaria netcore y agregarlo al proyecto existente
 
-kjkjk
+Este apartado es para agregar un proyecto de pruebas unitarias a una solucion existente:
+
+```shell
+dotnet new mstest -o "project name" -f netcoreapp3.1
+
+dotnet sln ".sln filename" add 'project name'/".csproj filename"
+```
 
 ### Ejemplos
 
-Ejemplo de un test unitario simple:
+#### Ejemplo de un test unitario simple:
 
 ```c#
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -53,7 +63,7 @@ namespace Tests
 }
 ```
 
-ejemplo de juguete de un test unitario en DDD:
+#### Ejemplo de juguete de un test unitario en DDD:
 
 suponiendo la jerarquia siguiente:
 
